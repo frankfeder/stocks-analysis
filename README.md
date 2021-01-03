@@ -8,9 +8,12 @@ From a technical perspective, this project demonstrates the power of VBA macros.
 ### Stock Performance
 This analysis uses VBA to cycle through each record in the worksheet for the year speficied by the user (2017 or 2018), output summaries for each company's Total Daily Volume and yearly Return, and format that output to make it easier to read. 
 In 2017, 11 of the 12 companies' stocks included in the data had a higher ending price than starting price:
+
 ![](./Resources/stockSummary2017.png)
+
 In 2018, only 2 of the 12 companies' stocks ended at a higher price than they had started:
-![](./Resources/stockSummary2019.png)
+
+![](./Resources/stockSummary2018.png)
 
 Based on these results, I would feel most confident about recommending a client to buy stock in ENPH (2017 up 129.5%, 2018 up 81.9%) as in both years the stock posted more consistent growth than any other in this data. After that I would advise a client to consider buying stock in RUN, as it was up in both 2017 and 2018 - although it was only up 5% in 2017, being up 84% in 2018 (a year when a majority of comparable companies were in the red) seems like a reasonable justification to invest.
 
@@ -20,8 +23,11 @@ As part of this project I first built a macro to summarize one company's stocks,
 Originally, the macro would iterate through all records to pull the summary about one company, output that summary to the results worksheet, then repeat that process for the next company until finished. The refactored version stores the summary info about each company in arrays as it iterates once through all records, then outputs those arrays onto the results page.
 
 Here's the output from the unfactored version for the 2018 data:
+
 ![](./Resources/unfactored2018.png)
+
 After applying the above changes to the code, the refactored version runs much faster for the same data:
+
 ![](./Resources/refactored2018.png)
 
 As you can see, the runtime was reduced by about 66%. This can be attributed to grouping related steps together to reduce the number of iterations through the data (originally 12 iterations, now 1) and to prevent the macro from having to flip back and forth between worksheets (originally 23 worksheet changes, now 1). 
