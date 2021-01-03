@@ -1,7 +1,7 @@
 # Stocks Analysis with VBA
 #### Analysis by Frank Feder for UT Austin Data Analysis Bootcamp January 2021
 ## Overview of Project
-This analysis summarizes a collection of provided data relating to daily performance of 12 companies' stocks over a two year period (2017-2018). The focus of this analysis will be identifying which comapnies' stocks performed best during the analyzed period, so as to best advise a client looking to buy stocks.
+This analysis summarizes a collection of provided data relating to daily performance of 12 companies' stocks over a two year period (2017-2018). The focus of this analysis will be identifying which companies' stocks performed best during the analyzed period, so as to best advise a client looking to buy stocks.
 From a technical perspective, this project demonstrates the power of VBA macros. I'll also touch on how refactoring a macro to use nested loops improved the efficiency of the programmatic analysis.
 
 ## Results
