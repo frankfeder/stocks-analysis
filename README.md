@@ -9,11 +9,11 @@ From a technical perspective, this project demonstrates the power of VBA macros.
 This analysis uses VBA to cycle through each record in the worksheet for the year speficied by the user (2017 or 2018), output summaries for each company's Total Daily Volume and yearly Return, and format that output to make it easier to read. 
 In 2017, 11 of the 12 companies' stocks included in the data had a higher ending price than starting price:
 
-![](./Resources/stockSummary2017.png)
+![](./Resources/VBA_Challenge_2017.png)
 
 In 2018, only 2 of the 12 companies' stocks ended at a higher price than they had started:
 
-![](./Resources/stockSummary2018.png)
+![](./Resources/VBA_Challenge_2018.png)
 
 Based on these results, I would feel most confident about recommending a client to buy stock in ENPH (2017 up 129.5%, 2018 up 81.9%) as in both years the stock posted more consistent growth than any other in this data. After that I would advise a client to consider buying stock in RUN, as it was up in both 2017 and 2018 - although it was only up 5% in 2017, being up 84% in 2018 (a year when a majority of comparable companies were in the red) seems like a reasonable justification to invest.
 
@@ -34,7 +34,7 @@ As you can see, the runtime was reduced by about 66%. This can be attributed to 
 
 ## Summary
 ### What are the advantages or disadvantages of refactoring code?
-Refactoring code should improve performance and readability, but sometimes a refactor can tip the scales towards one of these and away from the other. When working on a refactor it's easy to mistake "runtime" as the only relevant metric - time is money, and it costs time to run code, so if we reduce that time we save money. The reality is that poorly implemented time-saving fixes can create confusion for future developers attempting to modify code, and sorting out confusion costs time (money!). On the other hand, we need the code to run fast enough to provide value to the user. A developer's job is finding the sweet spot between readability and efficiency, to provide the most possible value to their organization.
+Refactoring code should improve performance and readability, but sometimes a refactor can tip the scales towards one of these and away from the other. When working on a refactor it's easy to mistake "runtime" as the only relevant metric - time is money, and it costs time to run code, so if we reduce that time we save money. The reality is that poorly implemented time-saving fixes can create confusion for future developers attempting to modify code, and sorting out confusion costs time (money!). On the other hand, we need the code to run fast enough to provide value to the user. A developer's job is finding the sweet spot between readability and efficiency to provide the most possible value to their organization.
 
 ### How do these pros and cons apply to refactoring the original VBA script?
 Although the original script worked, it was taking 0.3 seconds instead of the refactored 0.1. Yes, this is three times longer, but the client for this "job" is a buddy, Steve. If Steve was running this analysis on a much larger dataset, or much more frequently, a 3x performance improvement would almost certainly be worth the developer time to implement. But the refactor costs us time - time that Steve is tapping his foot, trying to keep his investors on the line, wondering why we're not done yet. If we tell Steve that we spent 30 minutes restructuring our code to save him 0.2 seconds, Steve will likely not be happy. So in this case, refactoring the code did not provide much additional value to our organization (our buddy Steve).
