@@ -117,6 +117,6 @@ Sub AllStocksAnalysisRefactored()
     Next i
  
     endTime = Timer
-    MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
+    MsgBox "This refactored code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
 End Sub
